@@ -269,7 +269,7 @@ export default function Navbar({
 
           {/* Drawer panel sliding from right */}
           <div 
-            className={`absolute top-0 right-0 bottom-0 w-[85%] max-w-xs h-full flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out border-l ${
+            className={`absolute top-0 right-0 bottom-0 w-[85%] max-w-xs h-[100dvh] flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out border-l ${
               mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
             } ${
               darkMode ? 'bg-zinc-950 border-zinc-800 text-zinc-100' : 'bg-white border-zinc-200 text-zinc-900'
@@ -299,8 +299,8 @@ export default function Navbar({
               </button>
             </div>
 
-            {/* Drawer Body - Semua konten terlihat tanpa scroll */}
-            <div className="p-3 space-y-3 flex-1 overflow-y-visible">
+            {/* Drawer Body - Semua konten terlihat tanpa scroll pada viewport standar, aman pada layar kecil */}
+            <div className="p-3 space-y-2.5 flex-1 overflow-y-auto">
               {/* Search Bar */}
               <div className="relative w-full">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2.5 pointer-events-none text-zinc-400">
