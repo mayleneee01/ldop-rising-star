@@ -1,157 +1,174 @@
 import React, { useState } from 'react';
-import { TrendingUp, CloudSun, BarChart2, Mail, CheckCircle, Flame } from 'lucide-react';
+import { TrendingUp, CloudSun, BarChart2, Mail, Check, AlertCircle } from 'lucide-react';
 
 export default function Sidebar({ articles, onSelectArticle, darkMode }) {
+  const trendingArticles = articles.filter(a => a.trending).slice(0, 4);
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  // Poll state
   const [pollVoted, setPollVoted] = useState(false);
-  const [pollOption, setPollOption] = useState(null);
-  const [emailSubscribed, setEmailSubscribed] = useState('');
-  const [subscribedSuccess, setSubscribedSuccess] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [pollResults, setPollResults] = useState({
+    yes: 412,
+    no: 89,
+    undecided: 64
+  });
 
-  const trendingArticles = articles.filter(a => a.trending).slice(0, 5);
+  const totalVotes = pollResults.yes + pollResults.no + pollResults.undecided;
 
-  const handlePollVote = (option) => {
-    setPollOption(option);
+  const handleVote = (option) => {
+    if (pollVoted) return;
+    setPollResults(prev => ({
+      ...prev,
+      [option]: prev[option] + 1
+    }));
+    setSelectedOption(option);
     setPollVoted(true);
   };
 
-  const handleSubscribe = (e) => {
+  const handleNewsletter = (e) => {
     e.preventDefault();
-    if (!emailSubscribed.trim()) return;
-    setSubscribedSuccess(true);
-    setEmailSubscribed('');
+    if (!newsletterEmail.trim()) return;
+    setSubscribed(true);
+    setNewsletterEmail('');
   };
 
   return (
     <aside className="space-y-6">
-      {/* Weather / Campus Widget */}
-      <div className={`p-5 rounded-2xl border shadow-sm ${
-        darkMode ? 'bg-gradient-to-br from-gray-900 to-gray-800 border-gray-800 text-white' : 'bg-gradient-to-br from-orange-600 to-amber-600 border-orange-500 text-white'
-      }`}>
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">
-            Lampung Selatan
-          </span>
-          <CloudSun size={28} className="animate-pulse" />
-        </div>
-        <div className="flex items-baseline space-x-2">
-          <h3 className="text-4xl font-black">29°C</h3>
-          <span className="text-sm font-medium text-orange-100">Cerah Berawan</span>
-        </div>
-        <p className="text-xs text-orange-100 mt-2">
-          Institut Teknologi Sumatera (ITERA) • Kondisi cuaca kondusif untuk kegiatan akademik & riset luar ruang.
-        </p>
-      </div>
-
       {/* Trending / Terpopuler */}
-      <div className={`p-5 rounded-2xl border shadow-sm ${
-        darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'
-      }`}>
-        <h3 className="text-base font-black uppercase tracking-wide text-orange-600 dark:text-orange-400 flex items-center gap-2 mb-4 pb-2 border-b border-gray-200 dark:border-gray-800">
-          <TrendingUp size={18} /> Berita Terpopuler
-        </h3>
+      <div className={`p-5 rounded-3xl border shadow-sm ${darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-white border-zinc-200'}`}>
+        <div className="flex items-center space-x-2 pb-3 mb-4 border-b border-zinc-200 dark:border-zinc-800">
+          <div className="p-2 bg-red-600/10 text-red-600 dark:text-red-400 rounded-xl">
+            <TrendingUp size={18} />
+          </div>
+          <h3 className="font-black text-sm uppercase tracking-wider">Berita Terpopuler</h3>
+        </div>
         <div className="space-y-4">
-          {trendingArticles.map((article, index) => (
-            <div
-              key={article.id}
-              onClick={() => onSelectArticle(article)}
-              className="group cursor-pointer flex items-start space-x-3 pb-3 border-b border-gray-100 dark:border-gray-800/60 last:border-0 last:pb-0"
+          {trendingArticles.map((art, idx) => (
+            <div 
+              key={art.id}
+              onClick={() => onSelectArticle(art)}
+              className="group cursor-pointer flex items-start space-x-3 pb-3 border-b border-zinc-100 dark:border-zinc-800/60 last:border-0 last:pb-0"
             >
-              <span className="text-2xl font-black text-orange-600/60 dark:text-orange-400/60 w-6 shrink-0">
-                0{index + 1}
+              <span className="font-black text-xl text-red-600 dark:text-red-500 w-6 shrink-0 text-right font-serif">
+                0{idx + 1}
               </span>
               <div>
-                <span className="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase">
-                  {article.category}
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-red-600 dark:text-red-400">
+                  {art.category}
                 </span>
-                <h4 className={`text-xs sm:text-sm font-bold line-clamp-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition mt-0.5 ${
-                  darkMode ? 'text-gray-100' : 'text-gray-900'
-                }`}>
-                  {article.title}
+                <h4 className="text-xs font-bold leading-snug group-hover:text-red-500 transition line-clamp-2 mt-0.5">
+                  {art.title}
                 </h4>
+                <span className="text-[10px] text-zinc-400 mt-1 block">{art.views} pembaca</span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Interactive Poll / Jajak Pendapat */}
-      <div className={`p-5 rounded-2xl border shadow-sm ${
-        darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'
-      }`}>
-        <h3 className="text-base font-black uppercase tracking-wide text-orange-600 dark:text-orange-400 flex items-center gap-2 mb-3 pb-2 border-b border-gray-200 dark:border-gray-800">
-          <BarChart2 size={18} /> Jajak Pendapat Kampus
-        </h3>
-        <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-3">
-          Seberapa besar efektivitas penggunaan AI dalam proses pembelajaran di kampus menurut Anda?
-        </p>
-
-        {!pollVoted ? (
-          <div className="space-y-2">
-            {[
-              { id: 'sangat', label: 'Sangat Membantu & Inovatif' },
-              { id: 'cukup', label: 'Cukup Membantu' },
-              { id: 'biasa', label: 'Biasa Saja' }
-            ].map((opt) => (
-              <button
-                key={opt.id}
-                onClick={() => handlePollVote(opt.id)}
-                className={`w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold border transition ${
-                  darkMode ? 'bg-gray-800 border-gray-700 hover:bg-gray-700 text-gray-200' : 'bg-gray-50 border-gray-200 hover:bg-orange-50 hover:border-orange-300 text-gray-800'
-                }`}
-              >
-                {opt.label}
-              </button>
-            ))}
+      {/* Campus Weather Widget */}
+      <div className={`p-5 rounded-3xl border shadow-sm ${darkMode ? 'bg-zinc-900 border-zinc-800 text-zinc-100' : 'bg-white border-zinc-200 text-zinc-900'}`}>
+        <div className="flex items-center space-x-2 pb-3 mb-4 border-b border-zinc-200 dark:border-zinc-800">
+          <div className="p-2 bg-red-600/10 text-red-600 dark:text-red-400 rounded-xl">
+            <CloudSun size={18} />
           </div>
-        ) : (
-          <div className="space-y-2 text-xs">
-            <div className="p-3 bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-800 rounded-xl text-green-700 dark:text-green-300 font-medium flex items-center gap-2">
-              <CheckCircle size={16} /> Terima kasih atas partisipasi Anda!
-            </div>
-            <div className="space-y-1 pt-2">
-              <div className="flex justify-between font-semibold"><span>Sangat Membantu</span> <span>72%</span></div>
-              <div className="w-full bg-gray-200 dark:bg-gray-800 h-2 rounded-full overflow-hidden">
-                <div className="bg-orange-600 h-full w-[72%]"></div>
-              </div>
-              <div className="flex justify-between font-semibold pt-1"><span>Cukup Membantu</span> <span>21%</span></div>
-              <div className="w-full bg-gray-200 dark:bg-gray-800 h-2 rounded-full overflow-hidden">
-                <div className="bg-amber-500 h-full w-[21%]"></div>
-              </div>
-            </div>
+          <h3 className="font-black text-sm uppercase tracking-wider">Cuaca Kampus ITERA</h3>
+        </div>
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="text-2xl font-black">31°C</div>
+            <div className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Lampung Selatan, Berawan</div>
           </div>
-        )}
+          <div className="text-right">
+            <div className="text-xs font-bold text-red-600 dark:text-red-400">Indeks UV: Sedang</div>
+            <div className="text-[10px] text-zinc-400">Kelembapan: 78%</div>
+          </div>
+        </div>
       </div>
 
-      {/* Newsletter Subscription */}
-      <div className={`p-5 rounded-2xl border shadow-sm ${
-        darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'
-      }`}>
-        <h3 className="text-base font-black uppercase tracking-wide text-orange-600 dark:text-orange-400 flex items-center gap-2 mb-2 pb-2 border-b border-gray-200 dark:border-gray-800">
-          <Mail size={18} /> Buletin Harian
-        </h3>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
-          Dapatkan rangkuman berita pilihan seputar kampus dan teknologi langsung di inbox email Anda.
+      {/* Campus Poll */}
+      <div className={`p-5 rounded-3xl border shadow-sm ${darkMode ? 'bg-zinc-900 border-zinc-800 text-zinc-100' : 'bg-white border-zinc-200 text-zinc-900'}`}>
+        <div className="flex items-center space-x-2 pb-3 mb-4 border-b border-zinc-200 dark:border-zinc-800">
+          <div className="p-2 bg-red-600/10 text-red-600 dark:text-red-400 rounded-xl">
+            <BarChart2 size={18} />
+          </div>
+          <h3 className="font-black text-sm uppercase tracking-wider">Jajak Pendapat Mahasiswa</h3>
+        </div>
+        <p className="text-xs font-semibold mb-3">
+          Apakah fasilitas Wi-Fi kampus ITERA saat ini sudah memadai untuk kebutuhan riset akademik?
         </p>
 
-        {subscribedSuccess ? (
-          <div className="p-3 bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-800 rounded-xl text-green-700 dark:text-green-300 text-xs font-semibold flex items-center gap-2">
-            <CheckCircle size={16} /> Berhasil berlangganan buletin!
+        <div className="space-y-2.5">
+          {[
+            { key: 'yes', label: 'Ya, Sangat Memadai' },
+            { key: 'no', label: 'Belum Cukup' },
+            { key: 'undecided', label: 'Biasa Saja' }
+          ].map(opt => {
+            const count = pollResults[opt.key];
+            const percent = Math.round((count / totalVotes) * 100);
+            return (
+              <button
+                key={opt.key}
+                onClick={() => handleVote(opt.key)}
+                disabled={pollVoted}
+                className={`w-full text-left p-2.5 rounded-xl border text-xs font-bold transition relative overflow-hidden ${
+                  selectedOption === opt.key
+                    ? 'border-red-600 bg-red-600/10 text-red-600 dark:text-red-400'
+                    : darkMode ? 'border-zinc-800 bg-zinc-950/40 hover:bg-zinc-800' : 'border-zinc-200 bg-zinc-50 hover:bg-zinc-100'
+                }`}
+              >
+                {pollVoted && (
+                  <div 
+                    className="absolute inset-y-0 left-0 bg-red-600/20 transition-all duration-500" 
+                    style={{ width: `${percent}%` }}
+                  ></div>
+                )}
+                <div className="relative z-10 flex justify-between items-center">
+                  <span>{opt.label}</span>
+                  {pollVoted && <span className="font-black">{percent}%</span>}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+        <div className="text-[10px] text-zinc-400 mt-3 text-center">
+          Total {totalVotes} mahasiswa telah berpartisipasi.
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className={`p-5 rounded-3xl border shadow-sm ${darkMode ? 'bg-zinc-900 border-zinc-800 text-zinc-100' : 'bg-white border-zinc-200 text-zinc-900'}`}>
+        <div className="flex items-center space-x-2 pb-3 mb-4 border-b border-zinc-200 dark:border-zinc-800">
+          <div className="p-2 bg-red-600/10 text-red-600 dark:text-red-400 rounded-xl">
+            <Mail size={18} />
+          </div>
+          <h3 className="font-black text-sm uppercase tracking-wider">Buletin Kampus</h3>
+        </div>
+        <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-4 leading-relaxed">
+          Dapatkan rangkuman berita pilihan dan pengumuman akademik langsung ke email Anda setiap pekan.
+        </p>
+
+        {subscribed ? (
+          <div className="p-3 bg-red-600/10 border border-red-600/30 text-red-600 dark:text-red-400 rounded-xl text-xs font-bold flex items-center gap-2">
+            <Check size={16} /> Berhasil berlangganan buletin!
           </div>
         ) : (
-          <form onSubmit={handleSubscribe} className="space-y-2">
+          <form onSubmit={handleNewsletter} className="space-y-3">
             <input
               type="email"
-              placeholder="Alamat Email Anda"
-              value={emailSubscribed}
-              onChange={(e) => setEmailSubscribed(e.target.value)}
+              placeholder="Masukkan email anda..."
+              value={newsletterEmail}
+              onChange={(e) => setNewsletterEmail(e.target.value)}
               required
-              className={`w-full px-4 py-2.5 text-xs rounded-xl border transition focus:outline-none focus:ring-2 focus:ring-orange-500 ${
-                darkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-gray-50 border-gray-200 text-gray-900'
-              }`}
+              className={`w-full px-4 py-2.5 rounded-xl text-xs border ${
+                darkMode ? 'bg-zinc-950 border-zinc-800 text-white' : 'bg-zinc-100 border-zinc-200 text-black'
+              } focus:outline-none focus:ring-2 focus:ring-red-600`}
             />
             <button
               type="submit"
-              className="w-full py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl shadow-md transition"
+              className="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold shadow-md shadow-red-600/30 transition"
             >
               Berlangganan Sekarang
             </button>

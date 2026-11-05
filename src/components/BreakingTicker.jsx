@@ -4,11 +4,11 @@ import { Flame, Sparkles } from 'lucide-react';
 export default function BreakingTicker({ darkMode }) {
   return (
     <div className={`border-b px-4 py-2.5 flex items-center overflow-hidden text-xs sm:text-sm ${
-      darkMode ? 'bg-gray-950 border-gray-800 text-gray-300' : 'bg-orange-50 border-orange-100 text-orange-900'
+      darkMode ? 'bg-black border-zinc-800 text-zinc-300' : 'bg-red-50 border-red-100 text-red-950'
     }`}>
-      <div className="flex items-center space-x-2 font-bold px-3 py-1 bg-orange-600 text-white rounded-md shrink-0 shadow-sm mr-4">
+      <div className="flex items-center space-x-2 font-bold px-3 py-1 bg-red-600 text-white rounded-md shrink-0 shadow-md shadow-red-600/30 mr-4">
         <Flame size={15} className="animate-bounce" />
-        <span>BREAKING</span>
+        <span className="tracking-wider uppercase">BREAKING</span>
       </div>
       <div className="whitespace-nowrap overflow-hidden relative w-full">
         <div className="inline-block animate-marquee font-medium">
