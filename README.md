@@ -10,35 +10,66 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 | :--- | :--- |
 | **Tema Proyek** | **Portal Berita Mini** (*Mini News Portal*) |
 | **Kelompok** | **Kelompok 1** |
-| **Administrator** | Zhico Apta Pradita (125140030) |
+| **Ketua** | Muhammad Arya Wisma Nur Susanto (125140046) |
 | **Pendamping** | Najib Abhinaya |
 | **Mentor** | Cania Febrianti |
 | **Palet Desain UI** | Merah Putih (*Editorial Red & White*) |
 | **Identitas Logo** | Hitam Merah (*High-Contrast Black & Red Emblem*) |
+| **Tech Stack** | React.js, Tailwind CSS, LocalStorage API |
 
 ---
 
-## Susunan Tim Kelompok 1
+## **Struktur Tim & Pembagian Tugas**
 
-### Administrator
-- **Zhico Apta Pradita** (NIM: 125140030) - Administrator
+### **🎯 Kepemimpinan**
+| Nama | NIM | Peran | Tanggung Jawab |
+| :--- | :--- | :--- | :--- |
+| **Muhammad Arya Wisma Nur Susanto** | 125140046 | **Ketua Tim** | - Koordinasi keseluruhan proyek<br>- Quality assurance<br>- Final review implementasi |
 
-### Editor Redaksi
-1. **Sulis Nurbaiti** (NIM: 125140008) - Editor
-2. **Aydilla Safitri** (NIM: 125140010) - Editor
-3. **Chelsea Izza Nayara** (NIM: 125140016) - Editor
-4. **Asiah** (NIM: 125140021) - Editor
-5. **Salma Afiifah Putri** (NIM: 125140026) - Editor
-6. **Mentari Sihombing** (NIM: 125140031) - Editor
-7. **Rifqi Al Fikri** (NIM: 125140039) - Editor
-8. **Raden Roro Ayu Mutiara Insan Kamil** (NIM: 125140045) - Editor
-9. **Muhammad Arya Wisma Nur Susanto** (NIM: 125140046) - Editor
-10. **Rafky Subhan Kamil Nasution** (NIM: 125140067) - Editor
-11. **Anugrah Tsani Abiyyu Rafazi** (NIM: 125140131) - Editor
-12. **Zahra Salsabila** (NIM: 125140177) - Editor
-13. **Ahmad Fahmi Muhajir** (NIM: 125140199) - Editor
+### **🎨 UI/UX Design Team**
+| Nama | NIM | Kontribusi |
+| :--- | :--- | :--- |
+| **Sulis Nurbaiti** | 125140008 | - Wireframing & visual design |
+| **Aydilla Safitri** | 125140010 | - Color palette & branding |
+| **Chelsea Izza Nayara** | 125140016 | - Responsive layout design |
+| **Asiah** | 125140021 | - Mobile-first optimization |
+| **Zahra Salsabila** | 125140177 | - UX flow & interaction design |
 
-### Pembimbing & Pengarah
+### **💻 Frontend Development Team**
+| Nama | NIM | Komponen & Fitur |
+| :--- | :--- | :--- |
+| **Salma Afiifah Putri** | 125140026 | - Navbar & responsive navigation<br>- Dark/light mode toggle |
+| **Mentari Sihombing** | 125140031 | - HeroSection & featured articles<br>- Breaking news ticker |
+| **Rifqi Al Fikri** | 125140039 | - NewsGrid & category filtering<br>- Search functionality |
+| **Raden Roro Ayu Mutiara Insan Kamil** | 125140045 | - ArticleModal & reader interface<br>- Comments & likes system |
+| **Anugrah Tsani Abiyyu Rafazi** | 125140131 | - Sidebar widgets<br>- Weather component & polling system |
+
+### **🔧 Backend & Logic Team**
+| Nama | NIM | Sistem & Data |
+| :--- | :--- | :--- |
+| **Rafky Subhan Kamil Nasution** | 125140067 | - Bookmarks system & localStorage<br>- User session management |
+| **Ahmad Fahmi Muhajir** | 125140199 | - AdminPanel & CRUD operations<br>- Role-based access control |
+| **Zhico Apta Pradita** | 125140030 | - Authentication system<br>- Data validation & error handling |
+
+---
+
+### **👥 Anggota Kelompok (14 Orang)**
+1. **Muhammad Arya Wisma Nur Susanto** (125140046) - Ketua Tim
+2. **Sulis Nurbaiti** (125140008) - UI/UX Design
+3. **Aydilla Safitri** (125140010) - UI/UX Design
+4. **Chelsea Izza Nayara** (125140016) - UI/UX Design
+5. **Asiah** (125140021) - UI/UX Design
+6. **Salma Afiifah Putri** (125140026) - Frontend Development
+7. **Mentari Sihombing** (125140031) - Frontend Development
+8. **Rifqi Al Fikri** (125140039) - Frontend Development
+9. **Raden Roro Ayu Mutiara Insan Kamil** (125140045) - Frontend Development
+10. **Rafky Subhan Kamil Nasution** (125140067) - Backend & Logic
+11. **Anugrah Tsani Abiyyu Rafazi** (125140131) - Frontend Development
+12. **Zahra Salsabila** (125140177) - UI/UX Design
+13. **Ahmad Fahmi Muhajir** (125140199) - Backend & Logic
+14. **Zhico Apta Pradita** (125140030) - Backend & Logic
+
+### **Pembimbing & Pengarah**
 - **Pendamping**: Najib Abhinaya
 - **Mentor**: Cania Febrianti
 
@@ -190,5 +221,117 @@ mini-berita/
 
 ---
 
+## **📊 Timeline Pengembangan**
+
+### **Phase 1: Planning & Design (Minggu 1)**
+- ✅ **Wireframing** & konsep desain
+- ✅ **Color palette** merah-putih & branding
+- ✅ **Struktur komponen** React
+- ✅ **Database design** (newsData.js)
+
+### **Phase 2: Core Implementation (Minggu 2)**
+- ✅ **Setup project** React + Vite + Tailwind
+- ✅ **Navbar** dengan dark mode toggle
+- ✅ **HeroSection** & breaking news ticker
+- ✅ **NewsGrid** dengan kategori filtering
+- ✅ **ArticleModal** dengan sistem komentar
+- ✅ **Sidebar** widgets (trending, polling, newsletter)
+
+### **Phase 3: Advanced Features (Minggu 3)**
+- ✅ **Bookmarks system** dengan localStorage
+- ✅ **AdminPanel** dengan role-based access
+- ✅ **Authentication system** (admin2026, editor2026)
+- ✅ **Mobile optimization** & responsive design
+- ✅ **Performance optimization**
+
+### **Phase 4: Deployment & Documentation (Minggu 4)**
+- ✅ **Final testing** & bug fixes
+- ✅ **Build production** (`npm run build`)
+- ✅ **Documentation** & README update
+- ✅ **Git workflow** & branch management
+
+---
+
+## **🔧 Git Workflow & Branch Strategy**
+
+### **Branch Structure:**
+```
+main
+└── kelompok-1 (development branch)
+    ├── feature/navbar-responsive
+    ├── feature/mobile-drawer
+    ├── feature/admin-panel
+    └── bugfix/performance-optimization
+```
+
+### **Commit Guidelines:**
+```
+feat: add mobile drawer without scroll
+fix: responsive card layout on mobile
+refactor: optimize category grid layout
+docs: update README with team structure
+style: adjust mobile padding and spacing
+```
+
+### **Development Process:**
+1. **Clone repository:**
+   ```bash
+   git clone https://github.com/mayleneee01/ldop-rising-star.git
+   cd ldop-rising-star
+   git checkout kelompok-1
+   ```
+
+2. **Create feature branch:**
+   ```bash
+   git checkout -b feature/[feature-name]
+   ```
+
+3. **Commit changes:**
+   ```bash
+   git add .
+   git commit -m "feat: [descriptive message]"
+   ```
+
+4. **Push to remote:**
+   ```bash
+   git push origin feature/[feature-name]
+   ```
+
+5. **Create Pull Request** di GitHub → Merge ke `kelompok-1`
+
+---
+
+## **🚀 Deployment Checklist**
+
+### **Pre-deployment:**
+- [ ] `npm run build` sukses tanpa error
+- [ ] **Mobile testing** di berbagai device sizes
+- [ ] **Dark mode** berfungsi di semua komponen
+- [ ] **Bookmarks** tersimpan dengan benar
+- [ ] **Admin access** bekerja sesuai role
+
+### **Post-deployment:**
+- [ ] **Verify GitHub Pages** atau hosting
+- [ ] **Test semua user flows**
+- [ ] **Documentation** lengkap
+- [ ] **Backup data** lokal jika diperlukan
+
+---
+
+## **📞 Contact & Support**
+
+### **Tim Pengembangan:**
+- **Ketua:** Muhammad Arya Wisma Nur Susanto (125140046)
+- **Frontend Lead:** Salma Afiifah Putri (125140026)
+- **UI/UX Lead:** Sulis Nurbaiti (125140008)
+- **Backend Lead:** Rafky Subhan Kamil Nasution (125140067)
+
+### **Repository:**
+- **URL:** https://github.com/mayleneee01/ldop-rising-star
+- **Branch:** `kelompok-1`
+- **Live Demo:** [Link deployment jika ada]
+
+---
+
 **LDOP Rising Star 2026 - Himpunan Mahasiswa Informatika (HMIF) Institut Teknologi Sumatera (ITERA)**
-Dibuat oleh Kelompok 1.
+Dibuat oleh **Kelompok 1** dengan pembagian peran UI/UX, Frontend, dan Backend.
