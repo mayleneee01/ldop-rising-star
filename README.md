@@ -329,7 +329,7 @@ style: adjust mobile padding and spacing
 ### **Repository:**
 - **URL:** https://github.com/mayleneee01/ldop-rising-star
 - **Branch:** `kelompok-1`
-- **Live Demo:** [Link deployment jika ada]
+- **Live Demo:** ldopnews.maylene.site
 
 ---
 
