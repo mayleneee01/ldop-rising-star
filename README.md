@@ -353,7 +353,7 @@ style: adjust mobile padding and spacing
 
 - **URL:** https://github.com/mayleneee01/ldop-rising-star
 - **Branch:** `kelompok-1`
-- **Live Demo:** ldopnews.maylene.site
+- **Live Demo:** (https://ldop.vercel.app/)
 
 ---
 
