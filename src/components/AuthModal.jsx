@@ -59,8 +59,8 @@ export default function AuthModal({
     if (trimmed === 'admin2026') {
       const session = {
         role: 'admin',
-        title: 'Administrator Utama',
-        user: 'Zhico Apta Pradita',
+        title: 'Ketua / Administrator',
+        user: 'Muhammad Arya Wisma Nur Susanto',
         accessLevel: 'Akses Penuh',
         permissions: ['create_article', 'edit_article', 'delete_article', 'manage_categories', 'manage_poll', 'moderate_comments', 'reset_data']
       };

@@ -6,27 +6,29 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 
 ## Identitas Kelompok & Proyek
 
-| Atribut | Keterangan |
-| :--- | :--- |
-| **Tema Proyek** | **Portal Berita Mini** (*Mini News Portal*) |
-| **Kelompok** | **Kelompok 1** |
-| **Ketua** | Muhammad Arya Wisma Nur Susanto (125140046) |
-| **Pendamping** | Najib Abhinaya |
-| **Mentor** | Cania Febrianti |
-| **Palet Desain UI** | Merah Putih (*Editorial Red & White*) |
-| **Identitas Logo** | Hitam Merah (*High-Contrast Black & Red Emblem*) |
-| **Tech Stack** | React.js, Tailwind CSS, LocalStorage API |
+| Atribut             | Keterangan                                       |
+| :------------------ | :----------------------------------------------- |
+| **Tema Proyek**     | **Portal Berita Mini** (_Mini News Portal_)      |
+| **Kelompok**        | **Kelompok 1**                                   |
+| **Ketua**           | Muhammad Arya Wisma Nur Susanto (125140046)      |
+| **Pendamping**      | Najib Abhinaya                                   |
+| **Mentor**          | Cania Febrianti                                  |
+| **Palet Desain UI** | Merah Putih (_Editorial Red & White_)            |
+| **Identitas Logo**  | Hitam Merah (_High-Contrast Black & Red Emblem_) |
+| **Tech Stack**      | React.js, Tailwind CSS, LocalStorage API         |
 
 ---
 
 ## **Struktur Tim & Pembagian Tugas**
 
 ### **Kepemimpinan**
+
 | Nama | NIM | Peran | Tanggung Jawab |
 | :--- | :--- | :--- | :--- |
 | **Muhammad Arya Wisma Nur Susanto** | 125140046 | **Ketua Tim** | - Koordinasi keseluruhan proyek<br>- Quality assurance<br>- Final review implementasi |
 
 ### **UI/UX Design Team**
+
 | Nama | NIM | Kontribusi |
 | :--- | :--- | :--- |
 | **Sulis Nurbaiti** | 125140008 | - Wireframing & visual design |
@@ -36,6 +38,7 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 | **Zahra Salsabila** | 125140177 | - UX flow & interaction design |
 
 ### **Frontend Development Team**
+
 | Nama | NIM | Komponen & Fitur |
 | :--- | :--- | :--- |
 | **Salma Afiifah Putri** | 125140026 | - Navbar & responsive navigation<br>- Dark/light mode toggle |
@@ -45,6 +48,7 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 | **Anugrah Tsani Abiyyu Rafazi** | 125140131 | - Sidebar widgets<br>- Weather component & polling system |
 
 ### **Backend & Logic Team**
+
 | Nama | NIM | Sistem & Data |
 | :--- | :--- | :--- |
 | **Rafky Subhan Kamil Nasution** | 125140067 | - Bookmarks system & localStorage<br>- User session management |
@@ -70,6 +74,7 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 14. **Zhico Apta Pradita** (125140030) - Backend & Logic
 
 ### **Pembimbing & Pengarah**
+
 - **Pendamping**: Najib Abhinaya
 - **Mentor**: Cania Febrianti
 
@@ -77,13 +82,13 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 
 ## Tentang Project
 
-**Portal Berita Mini** adalah aplikasi web berita interaktif, responsif, dan modern yang dirancang khusus untuk civitas akademika ITERA dan publik luas. Aplikasi ini menyajikan jurnalisme terkurasi dalam tema visual **Merah Putih** dengan logo berkarakter **Hitam Merah**, palet aksen multi-kategori cerah, serta dilengkapi **Portal Redaksi & Admin Tersembunyi (Hidden Staff Access)** dengan otentikasi kredensial berbasis teks string (*Role-Based Access Control*).
+**Portal Berita Mini** adalah aplikasi web berita interaktif, responsif, dan modern yang dirancang khusus untuk civitas akademika ITERA dan publik luas. Aplikasi ini menyajikan jurnalisme terkurasi dalam tema visual **Merah Putih** dengan logo berkarakter **Hitam Merah**, palet aksen multi-kategori cerah, serta dilengkapi **Portal Redaksi & Admin Tersembunyi (Hidden Staff Access)** dengan otentikasi kredensial berbasis teks string (_Role-Based Access Control_).
 
 ### Fitur Unggulan
 
 1. **Logo Hitam Merah & Tema Merah Putih Kontras Tinggi**:
    - Lambang emblem heksagonal "ITERA" warna hitam pekat dengan aksen merah cerah dan teks pelengkap berdefinisi tinggi.
-   - Tetap terbaca tajam dan elegan di kedua mode tampilan (*Light Mode* dan *Dark Mode*).
+   - Tetap terbaca tajam dan elegan di kedua mode tampilan (_Light Mode_ dan _Dark Mode_).
 2. **Akses Staf Tersembunyi & Kredensial String**:
    - Navbar publik tidak menampilkan tombol login admin yang mencolok agar tampilan pembaca tetap bersih dan profesional.
    - Pintu masuk redaksi diakses melalui:
@@ -98,27 +103,27 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
    - Panel Admin menyediakan tampilan kartu adaptif di layar sempit (< 768px) dan tampilan tabel komprehensif di layar lebar.
 4. **Palet Aksen Kategori Diperluas**:
    - Selain fondasi merah-putih-hitam, setiap kategori berita memiliki tema warna pembeda tersendiri:
-     - Kampus ITERA: Merah (*Red*)
-     - Teknologi: Biru Langit (*Sky*)
-     - Nasional: Nila (*Indigo*)
-     - Olahraga: Zamrud (*Emerald*)
-     - Gaya Hidup: Kuning Kunyit (*Amber*)
-     - Opini: Lembayung (*Violet*)
-     - Akademik: Mawar (*Rose*)
-     - Riset: Hijau Biru (*Teal*)
-     - Prestasi: Biru (*Blue*)
+     - Kampus ITERA: Merah (_Red_)
+     - Teknologi: Biru Langit (_Sky_)
+     - Nasional: Nila (_Indigo_)
+     - Olahraga: Zamrud (_Emerald_)
+     - Gaya Hidup: Kuning Kunyit (_Amber_)
+     - Opini: Lembayung (_Violet_)
+     - Akademik: Mawar (_Rose_)
+     - Riset: Hijau Biru (_Teal_)
+     - Prestasi: Biru (_Blue_)
 5. **Kilas Berita (Breaking News Ticker)**:
-   - Baris informasi singkat berjalan (*animated marquee*) yang menyajikan topik terhangat secara real-time.
+   - Baris informasi singkat berjalan (_animated marquee_) yang menyajikan topik terhangat secara real-time.
 6. **Hero & Featured Section**:
-   - Sorotan berita utama (*Lead Story*) dengan tata letak visual editorial prestisius disertai dua artikel pendamping yang sedang tren.
+   - Sorotan berita utama (_Lead Story_) dengan tata letak visual editorial prestisius disertai dua artikel pendamping yang sedang tren.
 7. **Filter & Pencarian Real-Time**:
    - Filter instan berdasarkan kategori dan pencarian dinamis berdasarkan judul, kutipan, maupun nama penulis.
 8. **Article Reader Modal**:
    - Pengalaman membaca artikel detail dilengkapi foto resolusi tinggi, metadata lengkap, sistem like interaktif, dan formulir kirim komentar langsung.
 9. **Bookmarks Manager**:
-   - Simpan artikel favorit ke dalam daftar bacaan pribadi (tersimpan otomatis di *LocalStorage*).
+   - Simpan artikel favorit ke dalam daftar bacaan pribadi (tersimpan otomatis di _LocalStorage_).
 10. **Widget Samping (Sidebar)**:
-    - Berita Terpopuler (*Trending Articles*).
+    - Berita Terpopuler (_Trending Articles_).
     - Widget Cuaca Kampus ITERA.
     - Poling Aspirasi Mahasiswa dengan visualisasi bar persentase hasil suara langsung.
     - Formulir Berlangganan Newsletter.
@@ -129,19 +134,19 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 
 ## Matriks Hak Akses (Role-Based Access Control)
 
-| Fitur / Tindakan | Administrator (`admin2026`) | Editor (`editor2026`) | Pengunjung Publik |
-| :--- | :---: | :---: | :---: |
-| Membaca Berita & Kategori | Ya | Ya | Ya |
-| Bookmark, Like, & Komentar | Ya | Ya | Ya |
-| Mengisi Poling Mahasiswa | Ya | Ya | Ya |
-| Akses Dashboard Redaksi | Ya | Ya | Tidak |
-| Tambah, Edit, Hapus Artikel | Ya | Ya | Tidak |
-| Toggle Utama & Trending | Ya | Ya | Tidak |
-| Tambah & Hapus Kategori | Ya | Dibatasi (Read-only) | Tidak |
-| Moderasi & Hapus Komentar | Ya | Ya | Tidak |
-| Sunting Pertanyaan Poling | Ya | Dibatasi (Read-only) | Tidak |
-| Reset Suara Poling | Ya | Dibatasi (Terkunci) | Tidak |
-| Reset Data ke Default | Ya | Dibatasi (Terkunci) | Tidak |
+| Fitur / Tindakan            | Administrator (`admin2026`) | Editor (`editor2026`) | Pengunjung Publik |
+| :-------------------------- | :-------------------------: | :-------------------: | :---------------: |
+| Membaca Berita & Kategori   |             Ya              |          Ya           |        Ya         |
+| Bookmark, Like, & Komentar  |             Ya              |          Ya           |        Ya         |
+| Mengisi Poling Mahasiswa    |             Ya              |          Ya           |        Ya         |
+| Akses Dashboard Redaksi     |             Ya              |          Ya           |       Tidak       |
+| Tambah, Edit, Hapus Artikel |             Ya              |          Ya           |       Tidak       |
+| Toggle Utama & Trending     |             Ya              |          Ya           |       Tidak       |
+| Tambah & Hapus Kategori     |             Ya              | Dibatasi (Read-only)  |       Tidak       |
+| Moderasi & Hapus Komentar   |             Ya              |          Ya           |       Tidak       |
+| Sunting Pertanyaan Poling   |             Ya              | Dibatasi (Read-only)  |       Tidak       |
+| Reset Suara Poling          |             Ya              |  Dibatasi (Terkunci)  |       Tidak       |
+| Reset Data ke Default       |             Ya              |  Dibatasi (Terkunci)  |       Tidak       |
 
 ---
 
@@ -191,19 +196,23 @@ mini-berita/
 ## Panduan Menjalankan Project
 
 1. **Clone repository dan checkout branch**:
+
    ```bash
    git checkout kelompok-1
    ```
 
 2. **Instalasi dependensi**:
+
    ```bash
    npm install
    ```
 
 3. **Jalankan development server**:
+
    ```bash
    npm run dev
    ```
+
    Buka `http://localhost:5173` pada peramban Anda.
 
 4. **Akses Portal Staf / Redaksi**:
@@ -224,12 +233,14 @@ mini-berita/
 ## **Timeline Pengembangan**
 
 ### **Phase 1: Planning & Design (Minggu 1)**
+
 - **Wireframing** & konsep desain
 - **Color palette** merah-putih & branding
 - **Struktur komponen** React
 - **Database design** (newsData.js)
 
 ### **Phase 2: Core Implementation (Minggu 2)**
+
 - **Setup project** React + Vite + Tailwind
 - **Navbar** dengan dark mode toggle
 - **HeroSection** & breaking news ticker
@@ -238,6 +249,7 @@ mini-berita/
 - **Sidebar** widgets (trending, polling, newsletter)
 
 ### **Phase 3: Advanced Features (Minggu 3)**
+
 - **Bookmarks system** dengan localStorage
 - **AdminPanel** dengan role-based access
 - **Authentication system** (admin2026, editor2026)
@@ -245,6 +257,7 @@ mini-berita/
 - **Performance optimization**
 
 ### **Phase 4: Deployment & Documentation (Minggu 4)**
+
 - **Final testing** & bug fixes
 - **Build production** (`npm run build`)
 - **Documentation** & README update
@@ -255,6 +268,7 @@ mini-berita/
 ## **Git Workflow & Branch Strategy**
 
 ### **Branch Structure:**
+
 ```
 main
 └── kelompok-1 (development branch)
@@ -265,6 +279,7 @@ main
 ```
 
 ### **Commit Guidelines:**
+
 ```
 feat: add mobile drawer without scroll
 fix: responsive card layout on mobile
@@ -274,7 +289,9 @@ style: adjust mobile padding and spacing
 ```
 
 ### **Development Process:**
+
 1. **Clone repository:**
+
    ```bash
    git clone https://github.com/mayleneee01/ldop-rising-star.git
    cd ldop-rising-star
@@ -282,28 +299,32 @@ style: adjust mobile padding and spacing
    ```
 
 2. **Create feature branch:**
+
    ```bash
-   git checkout -b feature/[feature-name]
+   git checkout -b kelompok-1
    ```
 
 3. **Commit changes:**
+
    ```bash
    git add .
    git commit -m "feat: [descriptive message]"
    ```
 
 4. **Push to remote:**
+
    ```bash
-   git push origin feature/[feature-name]
+   git push origin kelompok-1
    ```
 
-5. **Create Pull Request** di GitHub → Merge ke `kelompok-1`
+5. **Create Pull Request** di GitHub : Merge ke `kelompok-1`
 
 ---
 
 ## **Deployment Checklist**
 
 ### **Pre-deployment:**
+
 - [ ] `npm run build` sukses tanpa error
 - [ ] **Mobile testing** di berbagai device sizes
 - [ ] **Dark mode** berfungsi di semua komponen
@@ -311,6 +332,7 @@ style: adjust mobile padding and spacing
 - [ ] **Admin access** bekerja sesuai role
 
 ### **Post-deployment:**
+
 - [ ] **Verify GitHub Pages** atau hosting
 - [ ] **Test semua user flows**
 - [ ] **Documentation** lengkap
@@ -321,12 +343,14 @@ style: adjust mobile padding and spacing
 ## **Contact & Support**
 
 ### **Tim Pengembangan:**
+
 - **Ketua:** Muhammad Arya Wisma Nur Susanto (125140046)
 - **Frontend Lead:** Salma Afiifah Putri (125140026)
 - **UI/UX Lead:** Sulis Nurbaiti (125140008)
 - **Backend Lead:** Rafky Subhan Kamil Nasution (125140067)
 
 ### **Repository:**
+
 - **URL:** https://github.com/mayleneee01/ldop-rising-star
 - **Branch:** `kelompok-1`
 - **Live Demo:** ldopnews.maylene.site

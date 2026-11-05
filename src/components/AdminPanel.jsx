@@ -66,7 +66,7 @@ export default function AdminPanel({
     category: 'Kampus ITERA',
     excerpt: '',
     content: '',
-    author: isEditor ? 'Editor Redaksi' : 'Zhico Apta Pradita (Admin)',
+    author: isEditor ? 'Editor Redaksi' : 'Muhammad Arya Wisma Nur Susanto (Admin)',
     authorRole: isEditor ? 'Redaktur Berita' : 'Lead Reporter Kelompok 1',
     readTime: '3 min read',
     image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
@@ -134,7 +134,7 @@ export default function AdminPanel({
       category: categories[1] || 'Kampus ITERA',
       excerpt: '',
       content: '',
-      author: isEditor ? 'Editor Redaksi' : 'Zhico Apta Pradita (Admin)',
+      author: isEditor ? 'Editor Redaksi' : 'Muhammad Arya Wisma Nur Susanto (Admin)',
       authorRole: 'Lead Reporter Kelompok 1',
       readTime: '3 min read',
       image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
@@ -304,7 +304,7 @@ export default function AdminPanel({
                 </h1>
               </div>
               <p className="text-[10px] sm:text-[11px] text-zinc-500 dark:text-zinc-400">
-                LDOP Rising Star 2026 : Kelompok 1 (User: {authSession?.user || authSession?.username || (isAdmin ? 'Zhico Apta Pradita' : 'Editor Redaksi')})
+                LDOP Rising Star 2026 : Kelompok 1 (User: {authSession?.user || authSession?.username || (isAdmin ? 'Muhammad Arya Wisma Nur Susanto' : 'Editor Redaksi')})
               </p>
             </div>
           </div>
@@ -522,8 +522,8 @@ export default function AdminPanel({
                 
                 <div className="space-y-2 text-xs">
                   <div className="flex justify-between py-1 border-b border-zinc-100 dark:border-zinc-800">
-                    <span className="text-zinc-500">Administrator Utama</span>
-                    <span className="font-bold">Zhico Apta Pradita (125140030)</span>
+                    <span className="text-zinc-500">Ketua / Administrator</span>
+                    <span className="font-bold">Muhammad Arya Wisma Nur Susanto (125140046)</span>
                   </div>
                   <div className="flex justify-between py-1 border-b border-zinc-100 dark:border-zinc-800">
                     <span className="text-zinc-500">Kelompok</span>
