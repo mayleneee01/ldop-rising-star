@@ -4,7 +4,7 @@ export const initialNews = [
     title: "Mahasiswa Teknik Informatika ITERA Ciptakan Sistem Deteksi Dini Banjir Berbasis IoT & AI",
     category: "Kampus ITERA",
     excerpt: "Tim mahasiswa HMIF ITERA berhasil merancang alat pemantau tinggi muka air sungai berbasis Internet of Things (IoT) yang terintegrasi dengan kecerdasan buatan.",
-    content: `Lampung Selatan — Mahasiswa Program Studi Teknik Informatika Institut Teknologi Sumatera (ITERA) kembali menorehkan prestasi gemilang melalui inovasi teknologi tepat guna. Tim yang dimotori oleh mahasiswa angkatan 2023 ini merancang sistem peringatan dini banjir mandiri yang diberi nama "HydroGuard-ITERA".
+    content: `Lampung Selatan - Mahasiswa Program Studi Teknik Informatika Institut Teknologi Sumatera (ITERA) kembali menorehkan prestasi gemilang melalui inovasi teknologi tepat guna. Tim yang dimotori oleh mahasiswa angkatan 2023 ini merancang sistem peringatan dini banjir mandiri yang diberi nama "HydroGuard-ITERA".
 
 Sistem ini menggunakan mikrokontroler ESP32 dan sensor ultrasonik yang ditempatkan di beberapa titik aliran sungai rawan di sekitar kampus dan wilayah Lampung Selatan. Data ketinggian air dikirim secara real-time ke cloud server menggunakan protokol MQTT dan dianalisis menggunakan model machine learning sederhana untuk memprediksi potensi banjir dalam rentang waktu 2 jam ke depan.
 
@@ -29,7 +29,7 @@ Rektor ITERA memberikan apresiasi tinggi atas inovasi ini dan berencana untuk me
     title: "Pendaftaran LDOP Rising Star 2026 Resmi Dibuka: Tantang Diri Jadi Developer Handal",
     category: "Kampus ITERA",
     excerpt: "Kaderisasi tahunan HMIF ITERA kembali hadir dengan tantangan pembuatan portal web mini dan deployment cloud secara kolaboratif.",
-    content: `Bandar Lampung — Himpunan Mahasiswa Informatika (HMIF) ITERA resmi membuka rangkaian kegiatan kaderisasi tahunan "LDOP Rising Star 2026". Kegiatan ini dirancang untuk mengasah kemampuan teknis dan kerja sama tim mahasiswa baru dalam membangun aplikasi web modern.
+    content: `Bandar Lampung - Himpunan Mahasiswa Informatika (HMIF) ITERA resmi membuka rangkaian kegiatan kaderisasi tahunan "LDOP Rising Star 2026". Kegiatan ini dirancang untuk mengasah kemampuan teknis dan kerja sama tim mahasiswa baru dalam membangun aplikasi web modern.
 
 Dalam sambutannya, Ketua HMIF ITERA menekankan pentingnya kolaborasi, penguasaan Git workflow, serta standar penulisan kode yang baik. Setiap kelompok ditantang untuk memilih satu dari 15 tema yang tersedia, mulai dari portal berita mini hingga e-commerce dan sistem pemesanan lapangan.
 
@@ -43,7 +43,7 @@ Antusiasme peserta terlihat sangat tinggi dengan terkumpulnya berbagai proposal 
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
     likes: 98,
     comments: [
-      { id: 1, user: "Maylenee", text: "Semangat untuk Kelompok 1! Kita pasti bisa menyelesaikannya dengan hasil terbaik." }
+      { id: 1, user: "Zhico Apta Pradita", text: "Semangat untuk Kelompok 1! Kita pasti bisa menyelesaikannya dengan hasil terbaik." }
     ],
     trending: true,
     featured: false
@@ -53,7 +53,7 @@ Antusiasme peserta terlihat sangat tinggi dengan terkumpulnya berbagai proposal 
     title: "Perkembangan Artificial Intelligence di Tahun 2026: Agentic AI Mengubah Lanskap Industri Software",
     category: "Teknologi",
     excerpt: "Evolusi AI bergeser dari model tanya-jawab konvensional menuju agen otonom yang mampu merencanakan dan mengeksekusi tugas kompleks secara mandiri.",
-    content: `Global — Teknologi kecerdasan buatan (AI) mengalami lompatan besar di tahun 2026. Fokus industri kini beralih ke "Agentic AI" — sistem AI yang tidak hanya merespons prompt teks, melainkan dapat bertindak sebagai agen otonom untuk menyelesaikan alur kerja multi-langkah seperti debugging kode, analisis data finansial, hingga orkestrasi infrastruktur cloud.
+    content: `Global - Teknologi kecerdasan buatan (AI) mengalami lompatan besar di tahun 2026. Fokus industri kini beralih ke "Agentic AI", sistem AI yang tidak hanya merespons prompt teks, melainkan dapat bertindak sebagai agen otonom untuk menyelesaikan alur kerja multi-langkah seperti debugging kode, analisis data finansial, hingga orkestrasi infrastruktur cloud.
 
 Para ahli teknologi mencatat bahwa adopsi AI agent di perusahaan rintisan maupun korporasi multinasional telah meningkatkan produktivitas hingga 300%. Kendati demikian, tantangan terkait keamanan siber, prompt injection, dan tata kelola etis tetap menjadi topik utama pembahasan regulator global.
 
@@ -73,7 +73,7 @@ Bagi mahasiswa dan developer pemula, tren ini menuntut penguatan fundamental pem
     title: "Tim Sepak Bola ITERA Juara 1 Turnamen Antar Perguruan Tinggi Regional Sumatra",
     category: "Olahraga",
     excerpt: "Menunjukkan taji di lapangan hijau, skuad mahasiswa ITERA sukses membungkam tuan rumah di partai final dramatis.",
-    content: `Bandar Lampung — Kebanggaan kembali disumbangkan oleh kontingen atlet mahasiswa ITERA dalam ajang Pekan Olahraga Mahasiswa Regional Sumatra 2026. Tim sepak bola kampus oranye ini sukses mengukir sejarah dengan membawa pulang trofi juara pertama.
+    content: `Bandar Lampung - Kebanggaan kembali disumbangkan oleh kontingen atlet mahasiswa ITERA dalam ajang Pekan Olahraga Mahasiswa Regional Sumatra 2026. Tim sepak bola kampus oranye ini sukses mengukir sejarah dengan membawa pulang trofi juara pertama.
 
 Pertandingan final yang digelar di Stadion Pahoman berlangsung sengit dan penuh drama jual-beli serangan. Berkat taktik cemerlang pelatih dan semangat juang tinggi para pemain, ITERA mengunci kemenangan dengan skor tipis 2-1 hingga peluit panjang dibunyikan.
 
@@ -82,7 +82,7 @@ Rektor dan seluruh civitas akademika menyambut kedatangan para atlet dengan suka
     authorRole: "Jurnalis Olahraga",
     date: "02 November 2026",
     readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80",
     likes: 87,
     comments: [],
     trending: false,
@@ -93,7 +93,7 @@ Rektor dan seluruh civitas akademika menyambut kedatangan para atlet dengan suka
     title: "Tips & Trik Produktif Kuliah Sambil Mengikuti Organisasi dan Freelance Coding",
     category: "Gaya Hidup",
     excerpt: "Manajemen waktu adalah kunci utama agar IPK tetap cemerlang tanpa harus mengorbankan pengalaman organisasi dan portofolio proyek.",
-    content: `Kampus — Menjadi mahasiswa rumpun sains dan teknologi seringkali mendatangkan tantangan tersendiri dalam membagi waktu antara jadwal kuliah yang padat, tugas praktikum, kepengurusan himpunan, dan proyek sampingan (freelance).
+    content: `Kampus - Menjadi mahasiswa rumpun sains dan teknologi seringkali mendatangkan tantangan tersendiri dalam membagi waktu antara jadwal kuliah yang padat, tugas praktikum, kepengurusan himpunan, dan proyek sampingan (freelance).
 
 Berikut adalah beberapa tips praktis agar tetap produktif dan terhindar dari burnout:
 1. **Gunakan Time Boxing & Calendar:** Catat seluruh jadwal kuliah dan deadline tugas menggunakan aplikasi digital.
@@ -117,7 +117,7 @@ Dengan manajemen waktu yang disiplin, mahasiswa dapat lulus tepat waktu dengan p
     title: "Pemerintah Provinsi Lampung Dorong Kolaborasi Startup Lokal dengan Kampus",
     category: "Nasional",
     excerpt: "Inisiatif digitalisasi daerah terus digalakkan melalui program inkubasi bisnis bersama perguruan tinggi di Provinsi Lampung.",
-    content: `Bandar Lampung — Pemerintah Provinsi Lampung melalui Dinas Komunikasi dan Informatika terus mendorong pertumbuhan ekosistem startup digital lokal. Langkah strategis ini diwujudkan melalui kerja sama pentahelix, melibatkan unsur pemerintah, akademisi, pelaku industri, media, dan komunitas.
+    content: `Bandar Lampung - Pemerintah Provinsi Lampung melalui Dinas Komunikasi dan Informatika terus mendorong pertumbuhan ekosistem startup digital lokal. Langkah strategis ini diwujudkan melalui kerja sama pentahelix, melibatkan unsur pemerintah, akademisi, pelaku industri, media, dan komunitas.
 
 Dalam forum diskusi yang diadakan di Bandar Lampung, para pelaku usaha rintisan teknologi memaparkan berbagai solusi inovatif untuk sektor pertanian, pariwisata, dan UMKM. Kehadiran kampus seperti ITERA dan Unila dinilai sangat krusial sebagai sumber talenta digital berbakat.
 

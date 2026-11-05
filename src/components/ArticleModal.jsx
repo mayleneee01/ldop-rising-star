@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, Clock, User, Bookmark, Heart, MessageSquare, Share2, Send, Check } from 'lucide-react';
+import { X, Clock, Bookmark, Heart, MessageSquare, Share2, Send, Check } from 'lucide-react';
+import { getCategoryTheme } from '../utils/categoryTheme';
 
 export default function ArticleModal({ article, onClose, bookmarks, onToggleBookmark, onLikeArticle, onAddComment, darkMode }) {
   const [commentText, setCommentText] = useState('');
@@ -31,26 +32,27 @@ export default function ArticleModal({ article, onClose, bookmarks, onToggleBook
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md overflow-y-auto animate-fadeIn">
       <div 
         className={`relative w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl overflow-y-auto border flex flex-col ${
-          darkMode ? 'bg-zinc-950 border-zinc-800 text-zinc-100' : 'bg-white border-zinc-200 text-zinc-900'
+          darkMode ? 'bg-zinc-950 border-zinc-800 text-zinc-100' : 'bg-white border-red-100 text-zinc-900'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Sticky Header inside modal */}
         <div className={`sticky top-0 z-20 px-6 py-4 border-b flex items-center justify-between backdrop-blur-md ${
-          darkMode ? 'bg-zinc-950/90 border-zinc-800' : 'bg-white/90 border-zinc-200'
+          darkMode ? 'bg-zinc-950/90 border-zinc-800' : 'bg-white/95 border-red-100'
         }`}>
           <div className="flex items-center space-x-2">
-            <span className="px-3 py-1 bg-red-600 text-white text-xs font-black rounded-full uppercase tracking-wider shadow-sm">
+            <span className={`px-3 py-1 ${getCategoryTheme(article.category).badge} text-xs font-black rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5`}>
+              <span className={`w-1.5 h-1.5 rounded-full ${getCategoryTheme(article.category).dot}`}></span>
               {article.category}
             </span>
-            <span className="text-xs text-zinc-400 hidden sm:inline">• Artikel Utama</span>
+            <span className="text-xs text-zinc-400 hidden sm:inline">- Artikel Pilihan</span>
           </div>
 
           <div className="flex items-center space-x-2">
             <button
               onClick={handleShare}
-              className={`p-2 rounded-full border transition flex items-center gap-1.5 text-xs font-bold ${
-                darkMode ? 'bg-zinc-900 border-zinc-800 text-zinc-300 hover:bg-zinc-800' : 'bg-zinc-100 border-zinc-200 text-zinc-700 hover:bg-zinc-200'
+              className={`p-2 rounded-xl border transition flex items-center gap-1.5 text-xs font-bold ${
+                darkMode ? 'bg-zinc-900 border-zinc-800 text-zinc-300 hover:bg-zinc-800' : 'bg-zinc-50 border-zinc-200 text-zinc-700 hover:bg-red-50 hover:text-red-600'
               }`}
               title="Salin Tautan"
             >
@@ -60,19 +62,25 @@ export default function ArticleModal({ article, onClose, bookmarks, onToggleBook
 
             <button
               onClick={() => onToggleBookmark(article.id)}
-              className={`p-2 rounded-full border transition ${
+              className={`p-2 rounded-xl border transition ${
                 isBookmarked 
                   ? 'bg-red-600 border-red-600 text-white' 
-                  : darkMode ? 'bg-zinc-900 border-zinc-800 text-zinc-300 hover:bg-zinc-800' : 'bg-zinc-100 border-zinc-200 text-zinc-700 hover:bg-zinc-200'
+                  : darkMode 
+                    ? 'bg-zinc-900 border-zinc-800 text-zinc-300 hover:bg-zinc-800' 
+                    : 'bg-zinc-50 border-zinc-200 text-zinc-700 hover:bg-red-50 hover:text-red-600'
               }`}
               title="Simpan Artikel"
             >
-              <Bookmark size={18} fill={isBookmarked ? "currentColor" : "none"} />
+              <Bookmark size={16} fill={isBookmarked ? "currentColor" : "none"} />
             </button>
 
             <button 
               onClick={onClose}
-              className={`p-2 rounded-full border transition ${darkMode ? 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:bg-zinc-800 hover:text-white' : 'bg-zinc-100 border-zinc-200 text-zinc-600 hover:bg-zinc-200'}`}
+              className={`p-2 rounded-xl border transition ${
+                darkMode 
+                  ? 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:bg-zinc-800 hover:text-white' 
+                  : 'bg-zinc-50 border-zinc-200 text-zinc-600 hover:bg-zinc-100'
+              }`}
             >
               <X size={18} />
             </button>
@@ -93,7 +101,7 @@ export default function ArticleModal({ article, onClose, bookmarks, onToggleBook
                 </div>
                 <div>
                   <div className="font-bold text-zinc-900 dark:text-zinc-100 text-sm">{article.author}</div>
-                  <div className="text-[11px] text-zinc-400">Tim Redaksi ITERA News • Kelompok 1</div>
+                  <div className="text-[11px] text-zinc-400">Tim Redaksi ITERA News - Kelompok 1</div>
                 </div>
               </div>
 
@@ -101,7 +109,7 @@ export default function ArticleModal({ article, onClose, bookmarks, onToggleBook
                 <span className="flex items-center gap-1"><Clock size={14} /> {article.date}</span>
                 <button
                   onClick={() => onLikeArticle(article.id)}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-600/10 text-red-600 dark:text-red-400 hover:bg-red-600/20 transition font-bold"
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-red-600/10 text-red-600 dark:text-red-400 hover:bg-red-600/20 transition font-bold"
                 >
                   <Heart size={15} fill="currentColor" /> {article.likes} Suka
                 </button>
@@ -132,7 +140,7 @@ export default function ArticleModal({ article, onClose, bookmarks, onToggleBook
 
             {/* Comment Form */}
             <form onSubmit={handleCommentSubmit} className={`p-4 sm:p-6 rounded-2xl border space-y-4 ${
-              darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-zinc-50 border-zinc-200'
+              darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-red-50/30 border-red-100'
             }`}>
               <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-400">Tulis Tanggapan Anda</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -174,11 +182,11 @@ export default function ArticleModal({ article, onClose, bookmarks, onToggleBook
               ) : (
                 article.comments.map((comment) => (
                   <div key={comment.id} className={`p-4 rounded-2xl border ${
-                    darkMode ? 'bg-zinc-900/60 border-zinc-800/80' : 'bg-white border-zinc-200'
+                    darkMode ? 'bg-zinc-900/60 border-zinc-800/80' : 'bg-white border-red-100 shadow-sm'
                   }`}>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-bold text-xs text-red-500">{comment.user}</span>
-                      <span className="text-[10px] text-zinc-400">Baru saja</span>
+                      <span className="font-bold text-xs text-red-600">{comment.user}</span>
+                      <span className="text-[10px] text-zinc-400">Pembaca Terverifikasi</span>
                     </div>
                     <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed">{comment.text}</p>
                   </div>
