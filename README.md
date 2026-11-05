@@ -21,12 +21,12 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 
 ## **Struktur Tim & Pembagian Tugas**
 
-### **🎯 Kepemimpinan**
+### **Kepemimpinan**
 | Nama | NIM | Peran | Tanggung Jawab |
 | :--- | :--- | :--- | :--- |
 | **Muhammad Arya Wisma Nur Susanto** | 125140046 | **Ketua Tim** | - Koordinasi keseluruhan proyek<br>- Quality assurance<br>- Final review implementasi |
 
-### **🎨 UI/UX Design Team**
+### **UI/UX Design Team**
 | Nama | NIM | Kontribusi |
 | :--- | :--- | :--- |
 | **Sulis Nurbaiti** | 125140008 | - Wireframing & visual design |
@@ -35,7 +35,7 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 | **Asiah** | 125140021 | - Mobile-first optimization |
 | **Zahra Salsabila** | 125140177 | - UX flow & interaction design |
 
-### **💻 Frontend Development Team**
+### **Frontend Development Team**
 | Nama | NIM | Komponen & Fitur |
 | :--- | :--- | :--- |
 | **Salma Afiifah Putri** | 125140026 | - Navbar & responsive navigation<br>- Dark/light mode toggle |
@@ -44,7 +44,7 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 | **Raden Roro Ayu Mutiara Insan Kamil** | 125140045 | - ArticleModal & reader interface<br>- Comments & likes system |
 | **Anugrah Tsani Abiyyu Rafazi** | 125140131 | - Sidebar widgets<br>- Weather component & polling system |
 
-### **🔧 Backend & Logic Team**
+### **Backend & Logic Team**
 | Nama | NIM | Sistem & Data |
 | :--- | :--- | :--- |
 | **Rafky Subhan Kamil Nasution** | 125140067 | - Bookmarks system & localStorage<br>- User session management |
@@ -53,7 +53,7 @@ Repository ini dibuat untuk memenuhi penugasan **LDOP Rising Star 2026 Kaderisas
 
 ---
 
-### **👥 Anggota Kelompok (14 Orang)**
+### **Anggota Kelompok (14 Orang)**
 1. **Muhammad Arya Wisma Nur Susanto** (125140046) - Ketua Tim
 2. **Sulis Nurbaiti** (125140008) - UI/UX Design
 3. **Aydilla Safitri** (125140010) - UI/UX Design
@@ -221,38 +221,38 @@ mini-berita/
 
 ---
 
-## **📊 Timeline Pengembangan**
+## **Timeline Pengembangan**
 
 ### **Phase 1: Planning & Design (Minggu 1)**
-- ✅ **Wireframing** & konsep desain
-- ✅ **Color palette** merah-putih & branding
-- ✅ **Struktur komponen** React
-- ✅ **Database design** (newsData.js)
+- **Wireframing** & konsep desain
+- **Color palette** merah-putih & branding
+- **Struktur komponen** React
+- **Database design** (newsData.js)
 
 ### **Phase 2: Core Implementation (Minggu 2)**
-- ✅ **Setup project** React + Vite + Tailwind
-- ✅ **Navbar** dengan dark mode toggle
-- ✅ **HeroSection** & breaking news ticker
-- ✅ **NewsGrid** dengan kategori filtering
-- ✅ **ArticleModal** dengan sistem komentar
-- ✅ **Sidebar** widgets (trending, polling, newsletter)
+- **Setup project** React + Vite + Tailwind
+- **Navbar** dengan dark mode toggle
+- **HeroSection** & breaking news ticker
+- **NewsGrid** dengan kategori filtering
+- **ArticleModal** dengan sistem komentar
+- **Sidebar** widgets (trending, polling, newsletter)
 
 ### **Phase 3: Advanced Features (Minggu 3)**
-- ✅ **Bookmarks system** dengan localStorage
-- ✅ **AdminPanel** dengan role-based access
-- ✅ **Authentication system** (admin2026, editor2026)
-- ✅ **Mobile optimization** & responsive design
-- ✅ **Performance optimization**
+- **Bookmarks system** dengan localStorage
+- **AdminPanel** dengan role-based access
+- **Authentication system** (admin2026, editor2026)
+- **Mobile optimization** & responsive design
+- **Performance optimization**
 
 ### **Phase 4: Deployment & Documentation (Minggu 4)**
-- ✅ **Final testing** & bug fixes
-- ✅ **Build production** (`npm run build`)
-- ✅ **Documentation** & README update
-- ✅ **Git workflow** & branch management
+- **Final testing** & bug fixes
+- **Build production** (`npm run build`)
+- **Documentation** & README update
+- **Git workflow** & branch management
 
 ---
 
-## **🔧 Git Workflow & Branch Strategy**
+## **Git Workflow & Branch Strategy**
 
 ### **Branch Structure:**
 ```
@@ -301,7 +301,7 @@ style: adjust mobile padding and spacing
 
 ---
 
-## **🚀 Deployment Checklist**
+## **Deployment Checklist**
 
 ### **Pre-deployment:**
 - [ ] `npm run build` sukses tanpa error
@@ -318,7 +318,7 @@ style: adjust mobile padding and spacing
 
 ---
 
-## **📞 Contact & Support**
+## **Contact & Support**
 
 ### **Tim Pengembangan:**
 - **Ketua:** Muhammad Arya Wisma Nur Susanto (125140046)
